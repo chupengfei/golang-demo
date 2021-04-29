@@ -8,10 +8,11 @@ import (
 
 func main() {
 
-	//readFile()
-	fmt.Println(string(switchTest(1, 2, "+")))
+	readFile()
+	fmt.Println(switchTest(1, 2, "l"))
 	forTest()
 	fmt.Println(convertToBin(5))
+
 }
 
 func readFile() {
@@ -23,11 +24,11 @@ func readFile() {
 	}
 }
 
-func switchTest(a, b int, op string) int {
+func switchTest(a, b int, op string) (int, error) {
 	var result int
 	switch op {
 	case "+":
-		result = a + b
+		 result = a + b
 	case "-":
 		result = a - b
 	case "*":
@@ -35,10 +36,12 @@ func switchTest(a, b int, op string) int {
 	case "/":
 		result = a / b
 	default:
-		panic("unsupported operator:" + op)
+		// 会终端
+		//panic("unsupported operator:" + op)
+		result = 0
 	}
 	fmt.Println(string(result))
-	return result
+	return result, nil
 }
 
 func forTest() {
@@ -59,6 +62,3 @@ func convertToBin(n int) string {
 	return result
 }
 
-func printFile()  {
-	
-}
