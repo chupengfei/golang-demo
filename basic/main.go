@@ -48,4 +48,6 @@ func main() {
 	fmt.Printf("d = %v &d= %p\n",d, d )  //d = [1 1 1] &d= 0xc0000181e0
 	d = append(d, 11)
 	fmt.Printf("d = %v &d= %p\n",d, d ) // d = [1 1 1 11] &d= 0xc00001a0f0
+
+
 }
