@@ -31,12 +31,15 @@ func map1() {
 
 func map2() {
 	m := make(map[string]string)
-
+	m["1"] = "1"
+	fmt.Println(m)
+	delete(m, "1")
 	fmt.Println(m)
 }
 
 func map3() {
 	var m3 map[string]string
-
+	fmt.Println(m3)
+	m3["1"] = "1"  // panic: assignment to entry in nil map
 	fmt.Println(m3)
 }
