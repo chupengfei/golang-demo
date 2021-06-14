@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	p "mavenq/basic/pkgtest"
+)
 
 func main() {
 
@@ -27,6 +30,6 @@ func main() {
 	for _, v := range arr3 {
 		fmt.Println(v)
 	}
-
+	fmt.Println(p.Add(1,2))
 	// 数组是值类型  [10]int 和 [20]int 是不同的类型  go语言一般不实用数组，使用切片
 }

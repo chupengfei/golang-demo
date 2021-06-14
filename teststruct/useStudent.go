@@ -1,15 +1,14 @@
 package main
 
-import "fmt"
+import (
+	"mavenq/teststruct/student"
+)
+
 
 func main() {
-	ss := Student{
-		"fei", 11,
+	ss := student.Student{Name: "fei",Age: 11,
 	}
-
-	ss.useStudent()
+	ss.UseStudent()
 }
 
-func (s Student) useStudent() {
-	fmt.Printf("student %v", s)
-}
+
